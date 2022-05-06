@@ -10,6 +10,7 @@
 <script>
     let a = parseInt(prompt('Nhập a:'))
     function isFibonacci(f){
+        if (f === 0) return false
         let a = 1, b = 1, c = 0 ;
         while (c < f) {
             a = b

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = parseInt(prompt('Nhập a:'))
+    function isFibonacci(f){
+        let a = 1, b = 1, c = 0 ;
+        while (c < f) {
+            a = b
+            b = c
+            c = a + b
+        }
+        if ( f === c ) return true
+        else return false
+    }
+    console.log(isFibonacci(a))
+</script>
+</html>

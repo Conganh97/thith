@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500" ></canvas>
+</body>
+<script>
+    class Circle{
+        x
+        y
+        radius
+        color
+        constructor(x,y,radius,color) {
+            this.x = x
+            this.y = y
+            this.color = color
+            this.radius = radius
+        }
+        render(){
+            let canvas = document.getElementById('canvas')
+            let c = canvas.getContext('2d')
+            c.beginPath()
+            c.arc(this.x,this.y,this.radius,0,Math.PI * 2)
+            c.fillStyle = this.color
+            c.fill()
+            c.closePath()
+        }
+    }
+    let circle = new Circle(10,10,100,'#000000')
+    circle.render()
+</script>
+</html>
